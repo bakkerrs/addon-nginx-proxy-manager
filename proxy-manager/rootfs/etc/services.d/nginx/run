@@ -17,7 +17,7 @@ mkdir -p \
   /tmp/nginx/cache/private \
   /var/cache/nginx/proxy_temp
 
-if ! bashio::fs.directory_exists "/config/diyhue"; then
+if bashio::fs.directory_exists "/config/diyhue"; then
   cp /config/diyhue/cert.pem /data/nginx/dummycert.pem
   cp /config/diyhue/cert.pem /data/nginx/dummykey.pem
 fi
